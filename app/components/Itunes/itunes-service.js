@@ -21,6 +21,7 @@ class ItunesService {
   }
 
   getMusicByArtist(artist) {
+    _state.songs = []
     var url = 'https://itunes.apple.com/search?callback=?&term=' + artist;
     // @ts-ignore
     $.getJSON(url)

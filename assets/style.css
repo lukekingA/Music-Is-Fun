@@ -1,0 +1,10 @@
+/* CSS Styles */
+
+body,
+html {
+  height: 100vh;
+  background-image: url('./images/cool-background.svg');
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

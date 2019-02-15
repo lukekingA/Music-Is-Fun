@@ -7,19 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music Is Fun!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="assets/style.css">
 
 </head>
 
 <body>
-    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-        </div>
-    </form>
-    <div id="songs">
+    <div class="container-fluid">
+        <header class="row">
+            <div class="col bg-dark d-flex flex-column justify-content-center align-items-center py-5">
+                <h2 class="text-primary mb-3">Groov</h2>
+                <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+                    <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                    <div class="form-group">
+                        <div class="btn-group">
+                            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <main class="row">
+            <div class="col">
+                <div id="songs" class="row">
 
+
+
+
+                </div>
+                <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by starline
+                    -
+                    www.freepik.com</a>
+            </div>
+        </main>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="app/main.js"></script>
