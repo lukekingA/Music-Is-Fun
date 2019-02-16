@@ -18,9 +18,11 @@ function drawSongs() {
       <div class="col col-sm-5 offset-sm-1 shadow-lg rounded p-3 my-4">
         <div class="card-body">
             <div class="card-content">
-            <img id="${currentSong.id}" src="${currentSong.albumArt}" alt="" class="img-fluid card-img-top">
+            <div id="${currentSong.id}">
+            <img src="${currentSong.albumArt}" alt="" class="img-fluid card-img-top">
             <audio src="${currentSong.preview}"></audio>
                 <h5 class="card-title">${currentSong.artist}</h5>
+            </div>
                 <p class="card-subtitle">${currentSong.collection}</p>
                 <div class="card-text d-flex justify-content-between"><span class="text-left">${currentSong.track}</span> <span class="text-right">${currentSong.price}</span></div>
             </div>
@@ -46,7 +48,7 @@ function setHandlers() {
   for (let song in songs) {
     let currentCard = songs[song]
     let songImage = $(`#${currentCard.id}`)
-    let track = $(`#${currentCard.id}~audio`)
+    let track = $(`#${currentCard.id} audio`)
     songImage.click(() => {
       pauseAudio(track[0])
       if (track[0].paused) {
