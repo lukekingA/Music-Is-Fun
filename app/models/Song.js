@@ -1,3 +1,4 @@
+let id = 0
 export default class Song {
     constructor(song) {
         this.title = song.trackName
@@ -8,6 +9,9 @@ export default class Song {
         this.price = song.collectionPrice
         this.preview = song.previewUrl
         this.track = song.trackName
+        this.kind = song.kind
+        this.id = id
+        id++
     }
 }
 
