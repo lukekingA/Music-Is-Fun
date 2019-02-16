@@ -15,14 +15,14 @@ function drawSongs() {
     let currentSong = songs[song]
     if (currentSong.kind == 'song') {
       template += `
-      <div class="col-12 col-sm-5 offset-sm-1 shadow-lg rounded p-3 my-4">
+      <div class="col-12 col-sm-5 offset-sm-1 shadow-lg rounded p-3 my-4 card-color">
         <div class="card-body">
             <div class="card-content">
             <div id="${currentSong.id}" class="relative">
             <img src="${currentSong.albumArt}" alt="" class="img-fluid card-img-top">
             <audio src="${currentSong.preview}"></audio>
                 <h5 class="card-title">${currentSong.artist}</h5>
-                <h1><i class="far fa-play-circle child text-light text-shadow"></i></h1>
+                <h1 class="hover"><i class="far fa-play-circle child text-light text-shadow"></i></h1>
             </div>
                 <p class="card-subtitle">${currentSong.collection}</p>
                 <div class="card-text d-flex justify-content-between"><span class="text-left">${currentSong.track}</span> <span class="text-right">${currentSong.price}</span></div>
@@ -74,7 +74,7 @@ class ItunesController {
   //DO NOT MODIFY THIS METHOD
   getMusic(e) {
     e.preventDefault();
-    var artist = e.target.artist.value;
+    var artist = e.target.artist.value ? e.target.artist.value : 'hits';
     //changes the button to loading while songs load
     document.querySelector('#get-music-button').textContent = 'LOADING....'
     itunesService.getMusicByArtist(artist)

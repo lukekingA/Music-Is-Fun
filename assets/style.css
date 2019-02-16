@@ -3,7 +3,7 @@
 body,
 html {
   height: 100vh;
-  background-image: url('./images/bg2.svg'), linear-gradient(grey, grey);
+  background-image: url("./images/bg2.svg"), linear-gradient(grey, grey);
   background-size: 200vw auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,7 +11,7 @@ html {
 
 audio {
   width: 80%;
-  font-size: .5rem;
+  font-size: 0.5rem;
 }
 
 .relative {
@@ -27,4 +27,8 @@ audio {
 
 .text-shadow {
   text-shadow: 1px 1px 2px rgba(36, 36, 36, 0.863);
+}
+
+.card-color {
+  background: rgba(240, 240, 240, 0.75);
 }
