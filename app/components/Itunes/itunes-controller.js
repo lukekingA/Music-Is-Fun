@@ -15,7 +15,7 @@ function drawSongs() {
     let currentSong = songs[song]
     if (currentSong.kind == 'song') {
       template += `
-      <div class="col col-sm-5 offset-sm-1 shadow-lg rounded p-3 my-4">
+      <div class="col-12 col-sm-5 offset-sm-1 shadow-lg rounded p-3 my-4">
         <div class="card-body">
             <div class="card-content">
             <div id="${currentSong.id}">
