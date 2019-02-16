@@ -3,8 +3,8 @@
 body,
 html {
   height: 100vh;
-  background-image: url('./images/cool-background.svg');
-  background-size: 100vw 100vh;
+  background-image: url('./images/bg2.svg'), linear-gradient(grey, grey);
+  background-size: 200vw auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -12,4 +12,19 @@ html {
 audio {
   width: 80%;
   font-size: .5rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(36, 36, 36, 0.863);
 }

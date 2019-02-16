@@ -6,7 +6,7 @@ const itunesService = new ItunesService()
 
 function drawSongs() {
   //changes button back to GET MUSIC once songs are loaded
-  document.querySelector('#get-music-button').textContent = 'GET MUSIC'
+  document.querySelector('#get-music-button').textContent = 'SEARCH'
   console.log(itunesService.Songs)
   let template = ''
   let songs = itunesService.Songs
@@ -18,10 +18,11 @@ function drawSongs() {
       <div class="col-12 col-sm-5 offset-sm-1 shadow-lg rounded p-3 my-4">
         <div class="card-body">
             <div class="card-content">
-            <div id="${currentSong.id}">
+            <div id="${currentSong.id}" class="relative">
             <img src="${currentSong.albumArt}" alt="" class="img-fluid card-img-top">
             <audio src="${currentSong.preview}"></audio>
                 <h5 class="card-title">${currentSong.artist}</h5>
+                <h1><i class="far fa-play-circle child text-light text-shadow"></i></h1>
             </div>
                 <p class="card-subtitle">${currentSong.collection}</p>
                 <div class="card-text d-flex justify-content-between"><span class="text-left">${currentSong.track}</span> <span class="text-right">${currentSong.price}</span></div>
